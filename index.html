@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#234637">
+<title>The Everyday Table | Simple, Flavorful Recipes</title>
+<meta name="description" content="Find approachable recipes for busy weeknights, cozy breakfasts, and fresh meals. Explore five kitchen-tested favorites with clear ingredients, US measurements, and step-by-step instructions.">
+<meta name="robots" content="index,follow">
+<style>
+:root{--forest:#234637;--forest-deep:#173428;--sage:#dfe9da;--sage2:#edf2e8;--cream:#fbf8f1;--paper:#fffefa;--ink:#202a24;--muted:#657168;--line:#e4e7de;--coral:#d87656;--gold:#e9ba66;--shadow:0 12px 30px #203d2b12}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}.wrap{width:min(1160px,calc(100% - 42px));margin:auto}
+.topline{background:var(--forest-deep);color:#f6f3e9;font-size:12px;letter-spacing:.35px;text-align:center;padding:8px 15px}.header{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}.headrow{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:25px;letter-spacing:-.9px;color:var(--forest)}.brand-mark{height:38px;width:38px;border-radius:50% 50% 45% 45%;display:grid;place-items:center;background:var(--sage);font-size:21px}.nav{display:flex;align-items:center;gap:25px;font-size:13px;font-weight:650;color:#44564a}.nav a:hover{color:var(--coral)}.nav-cta{padding:10px 15px;border-radius:999px;background:var(--forest);color:#fff!important}
+.hero{padding:38px 0 20px}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;min-height:430px;border-radius:24px;overflow:hidden;background:#e5ebdf}.hero-copy{padding:50px 18px 48px 48px;align-self:center}.eyebrow{font-size:11px;font-weight:850;letter-spacing:1.8px;text-transform:uppercase;color:#66806c}.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,5vw,66px);font-weight:600;line-height:1.02;letter-spacing:-2.8px;color:var(--forest);margin:14px 0 19px;max-width:520px}.hero-copy p{font-size:16px;max-width:440px;color:#526057;margin:0 0 25px}.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;background:var(--forest);color:#fff;border:0;border-radius:999px;padding:13px 19px;font-size:13px;font-weight:800;transition:.18s}.btn:hover{background:var(--forest-deep);transform:translateY(-1px)}.hero-photo{min-height:360px;background:url("https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=85") center/cover no-repeat}.hero-caption{display:flex;gap:9px;align-items:center;font-size:11px;color:#667568;margin-top:17px}.dot{width:7px;height:7px;border-radius:50%;background:var(--coral)}
+.intro-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:19px auto 58px}.intro-item{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:18px;display:flex;align-items:center;gap:13px}.intro-icon{width:43px;height:43px;background:var(--sage2);border-radius:13px;display:grid;place-items:center;font-size:20px;flex-shrink:0}.intro-item strong{display:block;font-size:13px}.intro-item span{font-size:12px;color:var(--muted)}
+.section-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:22px}.section-heading h2{font:600 clamp(30px,3.5vw,42px)/1.1 Georgia,"Times New Roman",serif;letter-spacing:-1px;color:var(--forest);margin:8px 0 0}.section-heading p{max-width:380px;color:var(--muted);font-size:13px;margin:0}.recipe-tools{display:flex;gap:10px;align-items:center;margin-bottom:24px}.search-wrap{position:relative;flex:1}.search-wrap span{position:absolute;left:14px;top:9px;color:#738078;font-size:20px}.search-wrap input{width:100%;border:1px solid var(--line);background:var(--paper);border-radius:11px;padding:12px 14px 12px 42px;outline:none}.search-wrap input:focus,.filter:focus{border-color:#839a85;box-shadow:0 0 0 3px #23463712}.filter{border:1px solid var(--line);border-radius:11px;background:var(--paper);padding:12px;color:var(--ink);max-width:190px}.recipe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:21px;margin-bottom:66px}.recipe-card{overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:17px;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}.recipe-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.recipe-image{height:220px;position:relative;background:#e9ece3}.recipe-image img{display:block;width:100%;height:100%;object-fit:cover}.tag{position:absolute;top:13px;left:13px;border-radius:7px;padding:5px 9px;background:#fffefaed;font-weight:800;font-size:10px;letter-spacing:.4px;color:var(--forest)}.card-body{padding:17px;display:flex;flex-direction:column;flex:1}.meta{display:flex;gap:13px;flex-wrap:wrap;font-size:11px;color:var(--muted)}.meta span{display:inline-flex;align-items:center;gap:5px}.recipe-card h3{font:600 24px/1.15 Georgia,"Times New Roman",serif;letter-spacing:-.4px;color:var(--forest);margin:11px 0 9px}.recipe-card p{font-size:13px;color:#59655d;margin:0 0 17px}.card-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto}.text-btn{border:0;background:none;color:var(--forest);font-size:12px;font-weight:850;padding:7px 0}.text-btn:hover{text-decoration:underline;text-underline-offset:4px}.save-btn{height:35px;width:35px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--forest);font-size:18px}.save-btn.saved{background:#f9e5dc;border-color:#f0c9ba;color:#b44f34}.empty{grid-column:1/-1;background:var(--paper);border:1px solid var(--line);padding:30px;text-align:center;border-radius:15px;color:var(--muted)}
+
+.watch-section{margin:5px auto 68px}.watch-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:20px;align-items:stretch}.video-panel{background:var(--forest-deep);color:#f8f5eb;border-radius:22px;padding:14px;overflow:hidden;min-width:0}.video-frame{border-radius:14px;overflow:hidden;background:#0b1c13}.video-frame video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#0b1c13}.video-details{padding:17px 7px 5px;display:flex;align-items:flex-start;justify-content:space-between;gap:18px}.video-details h3{font:600 22px/1.15 Georgia,serif;margin:5px 0 6px;color:#fff}.video-details p{font-size:12px;line-height:1.5;color:#c8d8cc;margin:0;max-width:370px}.video-label{font-size:10px;text-transform:uppercase;letter-spacing:1.4px;color:#b9d4bc;font-weight:850}.source-link{font-size:11px;line-height:1.35;color:#f3d3a3;text-decoration:underline;text-underline-offset:3px;white-space:nowrap;margin-top:5px}.source-link:hover{color:#fff}.video-side{background:#e8eee2;border-radius:22px;overflow:hidden;display:flex;flex-direction:column}.video-side img{width:100%;height:240px;object-fit:cover;display:block}.video-side-copy{padding:23px 25px 25px;flex:1}.video-side h3{font:600 28px/1.1 Georgia,serif;letter-spacing:-.7px;color:var(--forest);margin:9px 0 10px}.video-side p{font-size:13px;color:#5d695f;margin:0 0 17px}.quick-tags{display:flex;gap:7px;flex-wrap:wrap}.quick-tags span{background:#fffefa;border:1px solid #dbe4d5;border-radius:999px;padding:6px 10px;font-size:10px;color:#405748;font-weight:750}.media-credit{font-size:10px;color:#b9cbbd;margin:11px 7px 0}.media-credit a{color:#e6d8bb;text-decoration:underline;text-underline-offset:2px}
+.feature{display:grid;grid-template-columns:.9fr 1.1fr;background:#f1e4d7;border-radius:23px;overflow:hidden;margin-bottom:68px}.feature img{width:100%;height:100%;min-height:320px;object-fit:cover}.feature-copy{padding:39px 42px;align-self:center}.feature h2{font:600 36px/1.08 Georgia,"Times New Roman",serif;letter-spacing:-1.2px;color:#5c3626;margin:10px 0 14px}.feature p{font-size:14px;color:#735c4f;max-width:440px}.feature .btn{background:#70412d}.about{padding-bottom:65px}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.about h2{font:600 34px/1.1 Georgia,"Times New Roman",serif;color:var(--forest);margin:8px 0 12px}.about p{color:var(--muted);font-size:14px}.about-note{background:#e8efe3;border-radius:15px;padding:23px;color:#405548;font-size:13px;align-self:center}
+.footer{background:#1b3b2d;color:#eaf0e8;padding:43px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}.footer .brand{color:#fff}.footer .brand-mark{background:#e1eadb}.footer p,.footer a{color:#c8d8cb;font-size:12px}.footer h3{font-size:12px;color:#fff;letter-spacing:.7px;text-transform:uppercase;margin:4px 0 13px}.footer-links{display:grid;gap:8px}.footer a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}.footer-bottom{border-top:1px solid #ffffff28;margin-top:30px;padding-top:16px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#b6c9ba;font-size:11px}.image-note{font-size:10px!important;color:#b6c9ba!important;max-width:380px}
+.modal-backdrop{position:fixed;inset:0;background:#10271cbd;z-index:50;display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.open{display:flex}.modal{background:var(--paper);border-radius:20px;width:min(850px,100%);max-height:92vh;overflow:auto;box-shadow:0 22px 80px #0003}.modal-head{position:sticky;top:0;z-index:2;background:#fffefaed;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:17px 22px;display:flex;justify-content:space-between;align-items:center}.modal-head strong{color:var(--forest);font-family:Georgia,serif;font-size:19px}.close-btn{border:0;border-radius:50%;width:37px;height:37px;background:#edf1e9;color:var(--forest);font-size:23px}.recipe-detail{padding:0 28px 29px}.detail-hero{display:grid;grid-template-columns:.84fr 1.16fr;gap:24px;padding:24px 0}.detail-hero img{width:100%;height:250px;object-fit:cover;border-radius:14px}.detail-hero h2{font:600 34px/1.04 Georgia,serif;letter-spacing:-1px;color:var(--forest);margin:8px 0 12px}.detail-hero p{color:var(--muted);font-size:13px}.detail-stats{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0}.stat{border:1px solid var(--line);padding:7px 10px;border-radius:9px;font-size:11px}.detail-tools{display:flex;gap:8px;flex-wrap:wrap}.outline-btn{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 13px;color:var(--forest);font-weight:750;font-size:11px}.recipe-content{display:grid;grid-template-columns:.75fr 1.25fr;gap:30px;border-top:1px solid var(--line);padding-top:23px}.recipe-content h3{font:600 24px Georgia,serif;color:var(--forest);margin:0 0 12px}.ingredients{list-style:none;padding:0;margin:0}.ingredients li{display:flex;align-items:flex-start;gap:9px;padding:9px 0;border-bottom:1px solid #ebeee7;font-size:13px}.ingredients input{margin-top:5px;accent-color:var(--forest)}.ingredients input:checked+span{text-decoration:line-through;color:#89938b}.steps{padding-left:21px;margin:0}.steps li{padding:0 0 13px 5px;color:#4e5b51;font-size:13px}.steps li::marker{font-weight:850;color:var(--coral)}.cook-note{font-size:11px;color:var(--muted);background:#f2f4ed;padding:12px;border-radius:10px;margin-top:17px}.contact-modal{padding:25px 28px}.contact-modal h2{font:600 30px Georgia,serif;color:var(--forest)}.contact-modal p{color:var(--muted);font-size:14px}
+@media(max-width:860px){.nav{gap:15px}.hero-grid{grid-template-columns:1fr}.hero-copy{padding:39px 34px}.hero-photo{min-height:300px;grid-row:1}.recipe-grid{grid-template-columns:repeat(2,1fr)}.feature{grid-template-columns:1fr}.feature img{height:250px;min-height:0;grid-row:1}.feature-copy{padding:30px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
+@media(max-width:860px){.watch-grid{grid-template-columns:1fr}.video-side img{height:280px}.video-details{padding:15px 7px 5px}}
+@media(max-width:580px){.wrap{width:calc(100% - 28px)}.headrow{height:auto;min-height:69px;flex-wrap:wrap;gap:13px;padding:13px 0}.brand{font-size:21px}.brand-mark{width:33px;height:33px}.nav{order:2;flex-basis:100%;justify-content:space-between;gap:8px;font-size:11px;padding-bottom:12px}.nav-cta{padding:7px 9px}.watch-side img{height:210px}.video-side img{height:210px}.video-details{display:block}.source-link{display:inline-block;margin-top:10px}.hero{padding-top:18px}.hero-grid{border-radius:18px}.hero-photo{min-height:210px}.hero-copy{padding:28px 23px 31px}.hero h1{font-size:43px;letter-spacing:-2px}.hero-copy p{font-size:14px}.intro-strip{grid-template-columns:1fr;gap:9px;margin:14px auto 44px}.intro-item{padding:13px}.section-heading{display:block}.section-heading p{margin-top:10px}.section-heading h2{font-size:32px}.recipe-tools{flex-direction:column;align-items:stretch}.filter{max-width:none}.recipe-grid{grid-template-columns:1fr;gap:15px}.recipe-image{height:235px}.recipe-card h3{font-size:25px}.feature-copy{padding:26px 23px}.feature h2{font-size:31px}.about-grid{grid-template-columns:1fr;gap:12px}.about h2{font-size:29px}.footer-grid{grid-template-columns:1fr;gap:23px}.footer-grid>div:first-child{grid-column:auto}.footer-bottom{align-items:flex-start;flex-direction:column}.detail-hero{grid-template-columns:1fr;gap:15px}.detail-hero img{height:220px}.detail-hero h2{font-size:31px}.recipe-detail{padding:0 17px 22px}.recipe-content{grid-template-columns:1fr;gap:26px;padding-top:18px}.modal-backdrop{padding:8px}.modal{max-height:96vh}.modal-head{padding:13px 16px}.contact-modal{padding:20px}}
+@media print{body{background:#fff}.topline,.header,.hero,.intro-strip,.section-heading,.recipe-tools,.recipe-grid,.watch-section,.feature,.about,.footer,.modal-head,.detail-tools{display:none!important}.modal-backdrop{position:static;display:block!important;background:#fff;padding:0}.modal{box-shadow:none;max-height:none;overflow:visible;width:100%;border:0}.recipe-detail{padding:0}.detail-hero{grid-template-columns:140px 1fr;padding-top:0}.detail-hero img{height:140px}.recipe-content{grid-template-columns:.8fr 1.2fr}}
+</style>
+</head>
+<body>
+<div class="topline">A good meal starts with a little inspiration.</div>
+<header class="header">
+ <div class="wrap">
+  <div class="headrow">
+   <a class="brand" href="#" aria-label="The Everyday Table home"><span class="brand-mark">✳</span><span>The Everyday Table</span></a>
+   <nav class="nav" aria-label="Main navigation"><a href="#recipes">Recipes</a><a href="#watch">Watch &amp; learn</a><a href="#our-kitchen">Our kitchen</a><a href="#recipe-notes">Cooking notes</a><a class="nav-cta" href="#recipes">Find a recipe ↗</a></nav>
+  </div>
+ </div>
+</header>
+<main>
+<section class="hero wrap">
+ <div class="hero-grid">
+  <div class="hero-copy">
+   <div class="eyebrow">Cook something worth gathering for</div>
+   <h1>Good food for real life.</h1>
+   <p>Fresh ideas, familiar ingredients, and practical steps for the meals that bring everyone to the table.</p>
+   <a class="btn" href="#recipes">Explore the recipes <span aria-hidden="true">→</span></a>
+   <div class="hero-caption"><span class="dot"></span> Five approachable favorites to cook this week</div>
+  </div>
+  <div class="hero-photo" role="img" aria-label="Fresh ingredients ready for home cooking"></div>
+ </div>
+</section>
+<section class="wrap intro-strip" aria-label="Recipe features">
+ <div class="intro-item"><span class="intro-icon">⏱</span><div><strong>Clear time estimates</strong><span>Plan prep and cooking around your day</span></div></div>
+ <div class="intro-item"><span class="intro-icon">🥄</span><div><strong>Everyday measurements</strong><span>Ingredients in cups, ounces, and teaspoons</span></div></div>
+ <div class="intro-item"><span class="intro-icon">♡</span><div><strong>Save your favorites</strong><span>Keep handy recipes in this browser</span></div></div>
+</section>
+<section class="wrap" id="recipes">
+ <div class="section-heading"><div><div class="eyebrow">From our recipe collection</div><h2>What sounds good today?</h2></div><p>Choose a cozy breakfast, an easy dinner, or a fresh favorite. Open a recipe for ingredients, step-by-step instructions, and a printable cooking view.</p></div>
+ <div class="recipe-tools">
+  <div class="search-wrap"><span aria-hidden="true">⌕</span><input type="search" id="recipeSearch" placeholder="Search by recipe or ingredient…" aria-label="Search recipes"></div>
+  <select class="filter" id="categoryFilter" aria-label="Filter recipes by category"><option value="All">All recipes</option><option value="Breakfast">Breakfast</option><option value="Dinner">Dinner</option><option value="Vegetarian">Vegetarian</option><option value="Seafood">Seafood</option></select>
+ </div>
+ <div class="recipe-grid" id="recipeGrid" aria-live="polite"></div>
+</section>
+<section class="wrap watch-section" id="watch">
+ <div class="section-heading"><div><div class="eyebrow">See the kitchen in motion</div><h2>Watch, learn, and get cooking.</h2></div><p>A short cooking-prep video alongside a fresh kitchen image gives you a little extra inspiration before you choose your next recipe.</p></div>
+ <div class="watch-grid">
+  <article class="video-panel">
+   <div class="video-frame">
+    <video controls playsinline preload="metadata" poster="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" aria-label="Cooking preparation video">
+     <source src="https://videos.pexels.com/video-files/7351818/7351818-hd_1920_1080_24fps.mp4" type="video/mp4">
+     Your browser does not support embedded video. <a href="https://www.pexels.com/video/woman-preparing-food-in-the-kitchen-7351818/" target="_blank" rel="noopener noreferrer">Open the cooking video source</a>.
+    </video>
+   </div>
+   <div class="video-details"><div><div class="video-label">Kitchen inspiration · Video</div><h3>Everyday food preparation</h3><p>A short visual look at home cooking and ingredient preparation. Use the controls to play, pause, or adjust the volume.</p></div><a class="source-link" href="https://www.pexels.com/video/woman-preparing-food-in-the-kitchen-7351818/" target="_blank" rel="noopener noreferrer">Video source &amp; license ↗</a></div>
+   <div class="media-credit">Video by Vivaan Rupani via <a href="https://www.pexels.com/video/woman-preparing-food-in-the-kitchen-7351818/" target="_blank" rel="noopener noreferrer">Pexels</a>.</div>
+  </article>
+  <aside class="video-side">
+   <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Colorful fresh vegetables arranged in a bowl" loading="lazy">
+   <div class="video-side-copy"><div class="eyebrow">A practical prep habit</div><h3>Make the first step the easiest one.</h3><p>Read the recipe once, wash and measure ingredients, and set out the tools you need. Keeping raw meat and seafood separate from ready-to-eat foods helps your kitchen stay organized and safe.</p><div class="quick-tags"><span>Read ahead</span><span>Prep ingredients</span><span>Clean as you go</span></div></div>
+  </aside>
+ </div>
+</section>
+<section class="wrap feature" id="recipe-notes">
+ <div class="feature-copy"><div class="eyebrow">A little planning goes a long way</div><h2>Make weeknight cooking feel easier.</h2><p>Read a recipe all the way through before you start, gather ingredients, and prep the ingredients that can wait safely. A calm start makes the cooking part more enjoyable.</p><a class="btn" href="#recipes">Pick your next meal →</a></div>
+ <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=85" alt="Bright home kitchen with a clean work surface" loading="lazy">
+</section>
+<section class="wrap about" id="our-kitchen">
+ <div class="about-grid">
+  <div><div class="eyebrow">Welcome to our kitchen</div><h2>Recipes that belong in your everyday routine.</h2><p>The Everyday Table is a home-cooking recipe collection focused on useful instructions, familiar ingredients, and meals that fit everyday schedules. Each recipe on this page includes ingredient amounts, timing, and clear steps to help you cook with confidence.</p></div>
+  <div class="about-note"><strong>Cooking note</strong><br>Times are estimates and can vary with equipment, ingredient size, and kitchen conditions. Cook meat, seafood, and eggs to safe internal temperatures using a food thermometer, and follow package directions when relevant.</div>
+ </div>
+</section>
+</main>
+<footer class="footer">
+ <div class="wrap">
+  <div class="footer-grid">
+   <div><a class="brand" href="#"><span class="brand-mark">✳</span><span>The Everyday Table</span></a><p>Simple, flavorful ideas for your home kitchen.</p><p class="image-note">Food photos are served from Unsplash. The cooking-prep video is served from Pexels under the Pexels License. Review each service’s current license terms before redistribution; video credit is provided above.</p></div>
+   <div><h3>Explore</h3><div class="footer-links"><a href="#recipes">All recipes</a><a href="#recipes" data-footer-filter="Breakfast">Breakfast ideas</a><a href="#recipes" data-footer-filter="Dinner">Dinner recipes</a><a href="#our-kitchen">About this kitchen</a></div></div>
+   <div><h3>Information</h3><div class="footer-links"><a href="#" id="privacyLink">Privacy notice</a><a href="#" id="termsLink">Recipe and site terms</a><a href="#" id="contactLink">Contact</a></div><p id="phoneLine" style="display:none"></p></div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="year"></span> The Everyday Table. All rights reserved.</span><span>Cook well, eat together.</span></div>
+ </div>
+</footer>
+<div class="modal-backdrop" id="recipeBackdrop" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+ <article class="modal">
+  <div class="modal-head"><strong>From The Everyday Table</strong><button class="close-btn" id="closeRecipe" aria-label="Close recipe">×</button></div>
+  <div class="recipe-detail" id="recipeDetail"></div>
+ </article>
+</div>
+<div class="modal-backdrop" id="infoBackdrop" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
+ <article class="modal">
+  <div class="modal-head"><strong>The Everyday Table</strong><button class="close-btn" id="closeInfo" aria-label="Close information">×</button></div>
+  <div class="contact-modal"><h2 id="infoTitle"></h2><div id="infoContent"></div><p id="contactNumber" style="font-weight:800;color:var(--forest)"></p></div>
+ </article>
+</div>
+<script>
+const recipes = [
+ {
+  id:"lemon-chicken",title:"Lemon-Garlic Chicken & Potatoes",category:"Dinner",label:"Weeknight favorite",time:55,prep:15,cook:40,yield:"4 servings",description:"Golden roasted chicken with tender potatoes, lemon, garlic, and a simple pan seasoning.",image:"https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=1000&q=85",alt:"Roasted chicken served with vegetables",
+  ingredients:["1½ lb boneless, skinless chicken thighs","1½ lb baby potatoes, halved","3 tbsp olive oil","4 garlic cloves, minced","1 lemon, zested and cut into wedges","1 tsp dried oregano","1 tsp kosher salt","½ tsp black pepper","2 tbsp chopped parsley"],
+  steps:["Heat the oven to 425°F. Line a rimmed sheet pan with parchment or lightly oil it.","In a large bowl, toss the potatoes with 1½ tablespoons olive oil, half the garlic, half the oregano, salt, and pepper. Spread on the pan and roast for 15 minutes.","Pat the chicken dry. Toss with the remaining oil, garlic, oregano, lemon zest, and a squeeze of lemon juice.","Move the potatoes to make room and place the chicken on the pan. Roast for 20–25 minutes, until the thickest part of each piece reaches 165°F and the potatoes are tender.","Rest the chicken for 5 minutes. Finish with parsley and lemon wedges, then serve warm."],
+  note:"Use a food thermometer to confirm chicken reaches 165°F. If your chicken pieces are unusually thick, allow extra cooking time."
+ },
+ {
+  id:"shrimp-tacos",title:"Citrus Shrimp Tacos",category:"Seafood",label:"Bright & quick",time:25,prep:15,cook:10,yield:"4 servings · 8 tacos",description:"Juicy skillet shrimp with crunchy cabbage, lime, and a creamy avocado-yogurt sauce.",image:"https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=1000&q=85",alt:"Shrimp tacos with fresh toppings",
+  ingredients:["1 lb peeled and deveined shrimp, thawed if frozen","1 tbsp olive oil","1 tsp chili powder","½ tsp ground cumin","¼ tsp kosher salt","8 small corn or flour tortillas","2 cups finely shredded red cabbage","1 avocado","¼ cup plain Greek yogurt","1 lime, divided","2 tbsp chopped cilantro"],
+  steps:["Pat the shrimp dry. Toss with olive oil, chili powder, cumin, salt, and 1 tablespoon lime juice.","Mash the avocado with Greek yogurt, the juice of half a lime, and a pinch of salt until creamy. Add a splash of water if needed to make it spoonable.","Heat a skillet over medium-high heat. Cook the shrimp for about 2 minutes per side, until opaque and cooked through.","Warm the tortillas in a dry skillet or directly over a low gas flame, turning carefully.","Fill each tortilla with cabbage and shrimp. Add avocado sauce, cilantro, and lime wedges."],
+  note:"Cook shrimp until opaque and firm. Keep raw seafood separate from ready-to-eat toppings and wash hands and utensils after handling."
+ },
+ {
+  id:"tomato-basil-pasta",title:"Creamy Tomato-Basil Pasta",category:"Vegetarian",label:"Comfort in a bowl",time:30,prep:10,cook:20,yield:"4 servings",description:"A silky tomato sauce with garlic, a splash of cream, fresh basil, and Parmesan.",image:"https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=85",alt:"Pasta with herbs and tomato sauce",
+  ingredients:["12 oz penne or rigatoni","2 tbsp olive oil","4 garlic cloves, thinly sliced","1 can (14.5 oz) crushed tomatoes","½ cup heavy cream","½ tsp kosher salt, plus pasta water as needed","¼ tsp black pepper","½ tsp dried Italian seasoning","½ cup grated Parmesan, plus more to serve","½ cup torn fresh basil"],
+  steps:["Bring a large pot of salted water to a boil. Cook the pasta according to the package directions until al dente. Reserve ½ cup pasta water, then drain.","While the pasta cooks, warm the olive oil in a large skillet over medium-low heat. Add garlic and cook for 30–60 seconds, until fragrant but not browned.","Stir in crushed tomatoes, Italian seasoning, salt, and pepper. Simmer for 8–10 minutes, stirring occasionally.","Lower the heat and stir in cream. Add the drained pasta and Parmesan, tossing until coated. Loosen the sauce with a splash of reserved pasta water as needed.","Turn off the heat. Fold in the basil and serve with extra Parmesan and black pepper."],
+  note:"For a lighter sauce, replace some cream with pasta water. Add the cheese off the heat to help keep the sauce smooth."
+ },
+ {
+  id:"blueberry-pancakes",title:"Fluffy Blueberry Pancakes",category:"Breakfast",label:"Weekend favorite",time:25,prep:10,cook:15,yield:"About 8 pancakes",description:"Soft, golden pancakes dotted with blueberries and finished with warm maple syrup.",image:"https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=1000&q=85",alt:"Stack of pancakes topped with blueberries",
+  ingredients:["1½ cups all-purpose flour","2 tbsp granulated sugar","2 tsp baking powder","¼ tsp kosher salt","1¼ cups milk","1 large egg","3 tbsp melted butter, plus more for the pan","1 tsp vanilla extract","¾ cup fresh or frozen blueberries","Maple syrup, for serving"],
+  steps:["In a large bowl, whisk flour, sugar, baking powder, and salt.","In another bowl, whisk milk, egg, melted butter, and vanilla. Pour into the dry ingredients and stir just until combined; a few small lumps are fine.","Rest the batter for 5 minutes while a lightly buttered skillet or griddle heats over medium heat.","Pour about ¼ cup batter per pancake onto the pan. Scatter a few blueberries over each pancake. Cook until bubbles form and the edges look set, about 2–3 minutes.","Flip and cook 1–2 minutes more, until golden and cooked through. Serve with maple syrup."],
+  note:"If using frozen blueberries, add them straight from the freezer to reduce streaking in the batter. Avoid pressing pancakes flat while they cook."
+ },
+ {
+  id:"grain-bowl",title:"Roasted Veggie & Chickpea Bowls",category:"Vegetarian",label:"Colorful & satisfying",time:40,prep:15,cook:25,yield:"4 servings",description:"Crispy-edged chickpeas, roasted seasonal vegetables, grains, and a lemon-tahini drizzle.",image:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=85",alt:"A colorful bowl of vegetables and grains",
+  ingredients:["1 can (15 oz) chickpeas, drained and rinsed","1 medium sweet potato, cut into ½-inch cubes","1 red bell pepper, chopped","1 small red onion, cut into wedges","3 tbsp olive oil, divided","1 tsp ground cumin","½ tsp smoked paprika","¾ cup dry quinoa or 1½ cups cooked grains","3 tbsp tahini","1 lemon, juiced","2–4 tbsp warm water","½ tsp kosher salt, plus more to taste"],
+  steps:["Heat the oven to 425°F. Pat the chickpeas dry with a clean towel. Toss the sweet potato, bell pepper, onion, and chickpeas with 2 tablespoons olive oil, cumin, paprika, and salt.","Spread everything in a single layer on a rimmed baking sheet. Roast for 22–28 minutes, turning once, until the vegetables are tender and browned at the edges.","Meanwhile, cook quinoa according to package directions, or warm prepared grains.","Whisk tahini, lemon juice, remaining olive oil, and 2 tablespoons warm water. Add more water, a little at a time, until the sauce pours easily. Season to taste.","Divide grains among four bowls. Top with roasted vegetables and chickpeas, then drizzle with lemon-tahini sauce."],
+  note:"Swap in cauliflower, zucchini, or carrots depending on the season. For crispier chickpeas, dry them very well before roasting."
+ }
+];
+// Phone is intentionally unset rather than inventing a business number.
+// To display your own verified US toll-free number, set both constants below.
+const SITE_PHONE_E164 = "";
+const SITE_PHONE_DISPLAY = "";
+const $ = id => document.getElementById(id);
+const moneylessTime = n => `${n} min`;
+let activeRecipe = null;
+let saved = new Set();
+try { saved = new Set(JSON.parse(localStorage.getItem("everydayTableSaved") || "[]")); } catch(e) {}
+function renderRecipes(){
+ const query = $("recipeSearch").value.trim().toLowerCase();
+ const filter = $("categoryFilter").value;
+ const found = recipes.filter(r => (filter==="All" || r.category===filter) && (r.title+" "+r.description+" "+r.category+" "+r.ingredients.join(" ")).toLowerCase().includes(query));
+ $("recipeGrid").innerHTML = found.length ? found.map(r=>`
+ <article class="recipe-card">
+  <div class="recipe-image"><img src="${r.image}" alt="${r.alt}" loading="lazy"><span class="tag">${r.label}</span></div>
+  <div class="card-body"><div class="meta"><span>◷ ${r.time} min total</span><span>♧ ${r.yield}</span></div><h3>${r.title}</h3><p>${r.description}</p>
+   <div class="card-actions"><button class="text-btn" data-open="${r.id}">View recipe →</button><button class="save-btn ${saved.has(r.id)?"saved":""}" data-save="${r.id}" aria-label="${saved.has(r.id)?"Remove":"Save"} ${r.title}" aria-pressed="${saved.has(r.id)}">${saved.has(r.id)?"♥":"♡"}</button></div>
+  </div>
+ </article>`).join("") : `<div class="empty">No recipes match your search. Try a different ingredient or choose “All recipes.”</div>`;
+ document.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>openRecipe(b.dataset.open)));
+ document.querySelectorAll("[data-save]").forEach(b=>b.addEventListener("click",()=>toggleSaved(b.dataset.save)));
+}
+function toggleSaved(id){
+ if(saved.has(id)) saved.delete(id); else saved.add(id);
+ try{localStorage.setItem("everydayTableSaved",JSON.stringify([...saved]));}catch(e){}
+ renderRecipes();
+}
+function openRecipe(id){
+ const r = recipes.find(x=>x.id===id); if(!r)return; activeRecipe=r;
+ $("recipeDetail").innerHTML=`
+ <div class="detail-hero"><img src="${r.image}" alt="${r.alt}"><div><div class="eyebrow">${r.label}</div><h2 id="detailTitle">${r.title}</h2><p>${r.description}</p>
+ <div class="detail-stats"><span class="stat">Prep: ${r.prep} min</span><span class="stat">Cook: ${r.cook} min</span><span class="stat">Total: ${r.time} min</span><span class="stat">Yield: ${r.yield}</span></div>
+ <div class="detail-tools"><button class="outline-btn" id="printRecipe">Print recipe</button><button class="outline-btn" id="saveRecipe">${saved.has(r.id)?"♥ Saved":"♡ Save recipe"}</button></div></div></div>
+ <div class="recipe-content"><section><h3>Ingredients</h3><ul class="ingredients">${r.ingredients.map((item,i)=>`<li><input type="checkbox" id="ing-${i}"><span>${item}</span></li>`).join("")}</ul></section>
+ <section><h3>Instructions</h3><ol class="steps">${r.steps.map(s=>`<li>${s}</li>`).join("")}</ol><div class="cook-note"><strong>Kitchen note:</strong> ${r.note}</div></section></div>`;
+ $("recipeBackdrop").classList.add("open");document.body.style.overflow="hidden";
+ $("printRecipe").onclick=()=>window.print();
+ $("saveRecipe").onclick=()=>{toggleSaved(r.id);$("saveRecipe").textContent=saved.has(r.id)?"♥ Saved":"♡ Save recipe";};
+}
+function closeRecipe(){ $("recipeBackdrop").classList.remove("open");document.body.style.overflow="";activeRecipe=null;}
+function showInfo(type){
+ const info={
+  privacy:{title:"Privacy notice",body:"This static recipe website does not ask visitors to create accounts, submit personal details, or make payments. The Save Recipe feature uses browser local storage on the visitor’s device. Recipe photos are loaded from Unsplash, which may receive a request from your browser when the page loads. If analytics, advertising tags, comments, newsletters, or contact forms are added later, update this notice to accurately explain those services and any data they collect."},
+  terms:{title:"Recipe and site terms",body:"Recipes are provided for general home-cooking information. Cooking times are estimates; results depend on equipment, ingredient size, and technique. Use safe food-handling practices and a food thermometer where appropriate. Check product labels for allergens and substitutions. You may print a recipe for personal use. Verify licensing before reproducing site content or photographs elsewhere."},
+  contact:{title:"Contact The Everyday Table",body:"For recipe questions or corrections, add your published business email or verified contact details before launching this website publicly. A contact address has not been fabricated for this site."}
+ };
+ $("infoTitle").textContent=info[type].title;$("infoContent").innerHTML=`<p>${info[type].body}</p>`;
+ $("contactNumber").textContent=(type==="contact" && SITE_PHONE_DISPLAY)?`Toll-free: ${SITE_PHONE_DISPLAY}`:"";
+ $("infoBackdrop").classList.add("open");document.body.style.overflow="hidden";
+}
+function closeInfo(){ $("infoBackdrop").classList.remove("open");document.body.style.overflow="";}
+$("recipeSearch").addEventListener("input",renderRecipes);
+$("categoryFilter").addEventListener("change",renderRecipes);
+$("closeRecipe").addEventListener("click",closeRecipe);
+$("recipeBackdrop").addEventListener("click",e=>{if(e.target===$("recipeBackdrop"))closeRecipe()});
+$("closeInfo").addEventListener("click",closeInfo);
+$("infoBackdrop").addEventListener("click",e=>{if(e.target===$("infoBackdrop"))closeInfo()});
+$("privacyLink").addEventListener("click",e=>{e.preventDefault();showInfo("privacy")});
+$("termsLink").addEventListener("click",e=>{e.preventDefault();showInfo("terms")});
+$("contactLink").addEventListener("click",e=>{e.preventDefault();showInfo("contact")});
+document.querySelectorAll("[data-footer-filter]").forEach(a=>a.addEventListener("click",()=>{$("categoryFilter").value=a.dataset.footerFilter;renderRecipes()}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeRecipe();closeInfo()}});
+$("year").textContent=new Date().getFullYear();
+if(SITE_PHONE_E164 && SITE_PHONE_DISPLAY){$("phoneLine").style.display="block";$("phoneLine").innerHTML=`Toll-free: <a href="tel:${SITE_PHONE_E164}">${SITE_PHONE_DISPLAY}</a>`;$("contactLink").style.display="inline";}else{$("contactLink").style.display="none";}
+renderRecipes();
+</script>
+</body>
+</html>
